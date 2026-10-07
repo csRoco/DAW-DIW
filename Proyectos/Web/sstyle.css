@@ -1,0 +1,70 @@
+/* ===== MARCO DE DEPURACIÓN VISUAL ===== */
+/* Un color por tipo de etiqueta semántica, para ver la estructura */
+
+header {
+  border: 3px solid #e63946; /* rojo */
+  padding: 1rem;
+}
+
+nav {
+  border: 3px solid #f4a261; /* naranja */
+  padding: 1rem;
+}
+nav ul {
+  list-style: none; /* quita los puntos/números de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block; /* saca cada li de su comportamiento block por defecto */
+  margin-right: 5rem;   /* separación horizontal entre elementos */
+}
+
+nav li:last-child {
+  margin-right: 0; /* evita margen sobrante después del último */
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  overflow: hidden; /* recuerda: contiene los floats para que main no colapse su altura */
+  border: 5px solid #457b9d; /* verde azulado */
+  padding: 1rem;
+}
+
+section {
+  float: left; /* ✅ añadido */
+  width: 70%; /* ✅ añadido */
+  border: 3px dashed #264653;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box; /* asegúrate de que esto está en tu reset global */
+}
+
+article {
+  border: 2px dotted #6a4c93;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+aside {
+  float: right;
+  width: 28%;
+  border: 3px solid #e9c46a;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+footer {
+  border: 3px solid #457b9d; /* azul */
+  padding: 1rem;
+}
