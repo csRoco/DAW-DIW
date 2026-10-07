@@ -1,0 +1,113 @@
+/* =========================================================
+   EJEMPLO 2 · MODELO DE CAJA
+   Conceptos: content, padding, border, margin, fondos
+
+   Experimenta:
+   1. Abre las DevTools (F12), selecciona un .plato y mira el
+      diagrama de caja en la pestaña «Calculado».
+   2. Descomenta la regla del final (outline) para ver todas
+      las cajas de la página.
+   3. En .plato, cambia padding por margin y observa qué
+      espacio deja de ser blanco.
+   4. Quita el background-color de .carta: el margen de los
+      platos mostrará entonces el fondo de body.
+   ========================================================= */
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  line-height: 1.5;
+  color: #3b2a20;
+  background-color: #efe6dc;
+}
+
+.cabecera {
+  padding: 2rem 1rem;
+  background-color: #3b2a20;
+  color: #fdf8f2;
+  text-align: center;
+}
+
+.cabecera h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 2.25rem;
+}
+
+.cabecera p {
+  margin: 0.25rem 0 0;
+}
+
+/* El fondo de .carta es el que se verá en los márgenes de los platos */
+.carta {
+  width: 92%;
+  max-width: 36rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #d8c3a5;
+}
+
+.carta h2 {
+  margin: 0 0 1rem;
+  font-family: Georgia, serif;
+}
+
+/* Cada plato: las cuatro partes del modelo de caja */
+.plato {
+  padding: 1rem 1.25rem;          /* contenido ↔ borde: se ve blanco */
+  border: 2px solid #3b2a20;      /* la línea que encierra contenido y relleno */
+  margin-bottom: 1.25rem;         /* separación entre platos: se ve el fondo de .carta */
+  background-color: #ffffff;      /* pinta contenido y relleno */
+}
+
+.plato h3 {
+  margin: 0 0 0.25rem;
+}
+
+.plato p {
+  margin: 0;
+}
+
+.precio {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Mismas zonas, distintos valores: más relleno y más borde */
+.plato--destacado {
+  padding: 1.5rem 1.75rem;
+  border-width: 4px;
+  background-color: #fff6d6;
+}
+
+/* --- Laboratorio --- */
+.laboratorio {
+  width: 92%;
+  max-width: 36rem;
+  margin: 0 auto 3rem;
+}
+
+/* El padre: su fondo amarillo es el que se ve en el margen del hijo.
+   El borde evita que los márgenes verticales del hijo "se escapen"
+   fuera del padre (colapso de márgenes, lo veremos más adelante).
+   Prueba a quitarlo y fíjate en la franja amarilla de arriba. */
+.zona-exterior {
+  border: 1px solid #d4b23c;
+  background-color: #f6d55c;
+}
+
+.anatomia {
+  margin: 30px;                  /* amarillo: fondo del padre */
+  border: 12px solid #3b2a20;    /* marrón */
+  padding: 30px;                 /* blanco: fondo de la propia caja */
+  background-color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Hace visibles todas las cajas sin alterar el diseño
+   (outline no ocupa espacio, border sí).
+* {
+  outline: 1px solid red;
+}
+*/

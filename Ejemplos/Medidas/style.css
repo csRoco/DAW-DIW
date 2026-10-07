@@ -1,0 +1,83 @@
+/* Recomendado en cualquier hoja de estilos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   1. PORCENTAJES (%)
+   ========================= */
+.contenedor {
+  width: 80%; /* % respecto al padre */
+  max-width: 70rem; /* tope para pantallas grandes */
+  margin: 0 auto;
+  padding: 2%; /* % del ANCHO del padre, incluso vertical */
+  background-color: #e8f4f8;
+}
+
+.fila {
+  display: flex;
+  gap: 4%; /* 48 % + 4 % + 48 % = 100 % */
+}
+
+.columna {
+  width: 48%;
+  padding: 1%; /* ya no suma gracias a border-box */
+  background-color: #1f6c8e; /* contraste AA con blanco */
+  color: white;
+}
+
+/* =========================
+   2. REM
+   ========================= */
+html {
+  font-size: 100%; /* respeta la preferencia del usuario */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.texto {
+  font-size: 1rem;
+  margin: 1.5rem;
+}
+
+/* =========================
+   3. EM
+   ========================= */
+.boton {
+  font-size: 1rem;
+  padding: 0.8em 1.5em; /* proporcional a SU texto */
+  border-radius: 0.4em;
+  margin: 1rem; /* espaciado general: rem */
+}
+
+.boton--grande {
+  font-size: 1.5rem; /* el padding crece solo: 19.2px / 36px */
+}
+
+/* =========================
+   4. VW / VH
+   ========================= */
+.cabecera {
+  min-height: 30vh; /* vh para la altura; min- para no recortar */
+  padding-inline: 5vw;
+  background-color: #34495e;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   5. PX
+   ========================= */
+.detalle {
+  border: 2px solid #333; /* detalle: px */
+  box-shadow: 0 0 5px #999; /* detalle: px */
+  margin-top: 1.25rem; /* espaciado: rem (20px por defecto) */
+}

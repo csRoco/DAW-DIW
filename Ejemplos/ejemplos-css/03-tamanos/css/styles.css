@@ -1,0 +1,139 @@
+/* =========================================================
+   EJEMPLO 3 · TAMAÑOS
+   Conceptos: width, max-width, height, %, margin auto,
+   margin de 1 a 4 valores, box-sizing
+
+   Experimenta:
+   1. En .tarifa quita box-sizing: border-box. Con width: 100%
+      la tarjeta se sale por la derecha. ¿Cuántos píxeles?
+   2. Inspecciona .prueba--content con las DevTools y comprueba
+      su ancho real: ancho del contenedor + 48px de relleno
+      + 12px de borde.
+   3. En .padre--sin-altura añade height: 8rem: el hijo pasa a
+      medir la mitad.
+   4. En .m4, escribe margin: 0 4rem y compara: ¿qué lados
+      han cambiado?
+   ========================================================= */
+
+body {
+  margin: 0;
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1e2a38;
+  background-color: #f2f4f7;
+}
+
+.cabecera {
+  padding: 2.5rem 1rem;
+  background-color: #1e2a38;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cabecera h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.cabecera p {
+  margin: 0.5rem 0 0;
+}
+
+/* Contenedor centrado: width en %, límite con max-width,
+   centrado con margin auto (necesita un width menor que el padre) */
+main {
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto 4rem;
+}
+
+/* --- Tarifas: width 100% + padding + borde SIN salirse --- */
+.tarifa {
+  box-sizing: border-box;   /* width incluye relleno y borde */
+  width: 100%;
+  padding: 1.5rem;
+  border: 3px solid #1e2a38;
+  margin: 0 0 1.5rem;       /* arriba 0 · lados 0 · abajo 1.5rem */
+  background-color: #ffffff;
+}
+
+.tarifa h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.precio {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b33a0a;
+}
+
+.tarifa p {
+  margin-bottom: 0;
+}
+
+/* --- Laboratorio 1 --- */
+.laboratorio {
+  margin-top: 3rem;
+}
+
+.contenedor-prueba {
+  width: 80%;
+  margin-bottom: 1.5rem;
+  border: 2px solid #8a94a3;
+  background-color: #cfd6df;
+}
+
+.prueba {
+  width: 100%;
+  padding: 1.5rem;
+  border: 6px solid #b33a0a;
+  background-color: #ffedd5;
+}
+
+.prueba--content {
+  box-sizing: content-box;  /* valor por defecto: 100% + 48px + 12px */
+}
+
+.prueba--border {
+  box-sizing: border-box;   /* 100% en total */
+}
+
+/* --- Laboratorio 2 --- */
+.padre {
+  margin-bottom: 1rem;
+  border: 2px dashed #8a94a3;
+  background-color: #ffffff;
+}
+
+.padre--con-altura {
+  height: 8rem;             /* referencia para el porcentaje */
+}
+
+/* .padre--sin-altura no tiene height: vale auto */
+
+.hijo {
+  height: 50%;
+  padding: 0 0.5rem;
+  background-color: #bfdbfe;
+}
+
+/* --- Laboratorio 3 --- */
+.margenes {
+  border: 2px solid #8a94a3;  /* evita que los márgenes se salgan del padre */
+  background-color: #cfd6df;  /* este gris es el que se ve en los márgenes */
+}
+
+.margenes p {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  font-family: "Courier New", monospace;
+}
+
+/* Ojo: entre párrafos seguidos, los márgenes verticales no se
+   suman; se toma el mayor (colapso de márgenes). */
+.m1 { margin: 1rem; }                 /* los cuatro lados */
+.m2 { margin: 1rem 3rem; }            /* vertical | horizontal */
+.m3 { margin: 0.5rem 2rem 2rem; }     /* arriba | lados | abajo */
+.m4 { margin: 0 4rem 1rem 0; }        /* arriba | derecha | abajo | izquierda */

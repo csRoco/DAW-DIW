@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablón de avisos · Ejemplo de bordes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="tablon">
+    <h1>Tablón de avisos del ciclo</h1>
+
+    <section>
+      <h2>Esta semana</h2>
+
+      <article class="aviso aviso--info">
+        <h3>Horario de tutorías</h3>
+        <p>Las tutorías de 2.º pasan al jueves de 14:30 a 15:20.</p>
+      </article>
+
+      <article class="aviso aviso--atencion">
+        <h3>Entrega del proyecto</h3>
+        <p>El plazo de entrega termina el viernes a las 23:59.</p>
+      </article>
+
+      <article class="aviso aviso--urgente">
+        <h3>Aula 12 cerrada</h3>
+        <p>Las clases del martes se trasladan al aula 7.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Frase de la semana</h2>
+      <blockquote class="cita">
+        <p>Primero haz que funcione; después, que sea legible; y por último, que sea rápido.</p>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>Recortable</h2>
+      <p class="cupon">Vale por una revisión de tu proyecto antes de la entrega.</p>
+    </section>
+  </main>
+
+  <aside class="laboratorio">
+    <h2>Laboratorio 1: los estilos de borde</h2>
+    <ul class="estilos">
+      <li class="solid">solid</li>
+      <li class="dashed">dashed</li>
+      <li class="dotted">dotted</li>
+      <li class="double">double</li>
+      <li class="groove">groove</li>
+      <li class="ridge">ridge</li>
+      <li class="inset">inset</li>
+      <li class="outset">outset</li>
+      <li class="none">none</li>
+      <li class="hidden">hidden</li>
+    </ul>
+
+    <h2>Laboratorio 2: trampas frecuentes</h2>
+    <p class="trampa trampa--sin-estilo">border: 4px #b91c1c; → falta el estilo, no se ve</p>
+    <p class="trampa trampa--correcta">border: 4px solid #b91c1c; → correcto</p>
+    <p class="trampa trampa--orden">border-left antes que border → border lo sobrescribe</p>
+  </aside>
+</body>
+</html>

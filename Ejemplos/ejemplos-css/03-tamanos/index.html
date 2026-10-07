@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gimnasio Vértice · Ejemplo de tamaños</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="cabecera">
+    <h1>Gimnasio Vértice</h1>
+    <p>Elige la tarifa que mejor encaje con tu semana.</p>
+  </header>
+
+  <main>
+    <section class="tarifas">
+      <h2>Tarifas mensuales</h2>
+
+      <article class="tarifa">
+        <h3>Mañanas</h3>
+        <p class="precio">24 € / mes</p>
+        <p>Acceso de lunes a viernes, de 7:00 a 14:00.</p>
+      </article>
+
+      <article class="tarifa">
+        <h3>Completa</h3>
+        <p class="precio">39 € / mes</p>
+        <p>Acceso sin límite de horario y todas las clases dirigidas.</p>
+      </article>
+    </section>
+
+    <aside class="laboratorio">
+      <h2>Laboratorio 1: content-box frente a border-box</h2>
+      <p>Las dos cajas tienen <code>width: 100%</code>, <code>padding: 1.5rem</code> y un borde de 6px. El recuadro gris es su contenedor.</p>
+
+      <div class="contenedor-prueba">
+        <div class="prueba prueba--content">content-box: se sale del contenedor</div>
+      </div>
+      <div class="contenedor-prueba">
+        <div class="prueba prueba--border">border-box: encaja exactamente</div>
+      </div>
+
+      <h2>Laboratorio 2: height en porcentaje</h2>
+      <div class="padre padre--con-altura">
+        <div class="hijo">Padre con height: 8rem → el hijo mide el 50%</div>
+      </div>
+      <div class="padre padre--sin-altura">
+        <div class="hijo">Padre sin altura → el 50% se ignora</div>
+      </div>
+
+      <h2>Laboratorio 3: margin de 1 a 4 valores</h2>
+      <p>El gris es el fondo del contenedor, visible a través de los márgenes.</p>
+      <div class="margenes">
+        <p class="m1">margin: 1rem</p>
+        <p class="m2">margin: 1rem 3rem</p>
+        <p class="m3">margin: 0.5rem 2rem 2rem</p>
+        <p class="m4">margin: 0 4rem 1rem 0</p>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>

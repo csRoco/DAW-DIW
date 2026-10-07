@@ -1,0 +1,151 @@
+/* =========================================================
+   EJEMPLO 4 · BORDES
+   Conceptos: border-width, border-style, border-color,
+   abreviadas, varios valores, patrón «general y detalle»
+
+   Experimenta:
+   1. En .aviso--info, borra border-left: el aviso se queda
+      solo con el borde gris común.
+   2. En .cupon, cambia border-style por dashed solid
+      (dos valores: arriba/abajo | izquierda/derecha).
+   3. En .trampa--sin-estilo añade «solid» al valor de border.
+   4. En .trampa--orden intercambia las dos líneas de borde.
+   ========================================================= */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background-color: #f7f7f2;
+}
+
+.tablon,
+.laboratorio {
+  width: 92%;
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.tablon {
+  padding: 2rem 0 1rem;
+}
+
+/* Un solo lado con la abreviada de ese lado */
+h1 {
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px double #1f2933;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 2rem 0 1rem;
+  font-size: 1.25rem;
+}
+
+h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+p {
+  margin: 0;
+}
+
+/* --- Patrón «general y después detalle» --- */
+.aviso {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d3d6db;          /* 1) borde común a los cuatro lados */
+  background-color: #ffffff;
+}
+
+.aviso--info {
+  border-left: 6px solid #2563eb;     /* 2) solo cambia el lado izquierdo */
+}
+
+.aviso--atencion {
+  border-left: 6px solid #b45309;
+}
+
+/* Otra forma: sobrescribir solo el aspecto que cambia */
+.aviso--urgente {
+  border-color: #b91c1c;              /* los 4 lados en rojo */
+  border-left-width: 6px;             /* y más grueso a la izquierda */
+}
+
+/* --- Un solo lado --- */
+.cita {
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  border-left: 4px solid #6b7280;
+  font-style: italic;
+}
+
+/* --- Las tres propiedades por separado --- */
+.cupon {
+  padding: 1.25rem;
+  border-width: 3px;
+  border-style: dashed;
+  border-color: #1f2933;
+  background-color: #fffbea;
+  text-align: center;
+}
+
+/* --- Laboratorio 1 --- */
+.laboratorio {
+  padding-bottom: 3rem;
+}
+
+.estilos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.estilos li {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  border-width: 6px;         /* grueso para apreciar los efectos 3D */
+  border-color: #6b8fb3;
+  background-color: #ffffff;
+  font-family: "Courier New", monospace;
+  text-align: center;
+}
+
+.solid  { border-style: solid; }
+.dashed { border-style: dashed; }
+.dotted { border-style: dotted; }
+.double { border-style: double; }
+.groove { border-style: groove; }
+.ridge  { border-style: ridge; }
+.inset  { border-style: inset; }
+.outset { border-style: outset; }
+.none   { border-style: none; }    /* sin borde */
+.hidden { border-style: hidden; }  /* igual que none fuera de las tablas */
+
+/* --- Laboratorio 2 --- */
+.trampa {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+/* Sin estilo: border-style vale none y el borde no aparece */
+.trampa--sin-estilo {
+  border: 4px #b91c1c;
+}
+
+.trampa--correcta {
+  border: 4px solid #b91c1c;
+}
+
+/* Orden incorrecto: la abreviada border también reinicia el
+   lado izquierdo, así que la línea anterior se pierde */
+.trampa--orden {
+  border-left: 8px solid #2563eb;
+  border: 1px solid #d3d6db;
+}

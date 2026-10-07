@@ -1,0 +1,33 @@
+/*Los tres métodos:
+
+Método	Sintaxis	Ejemplo
+Nombre	palabra reservada en inglés	color: tomato;
+HEX	#RRGGBB (valores hexadecimales de rojo, verde, azul)	color: #ff6347;
+RGB	rgb(rojo, verde, azul) (valores de 0 a 255)	color: rgb(255, 99, 71);*/
+
+/*Herramienta color picker, color.adobe.com
+
+/* 1. Color por NOMBRE */
+h1 {
+  color: darkslateblue;
+  background-color: lavender;
+}
+
+/* 2. Color en HEX (#RRGGBB) */
+ul {
+  background-color: #f4f7f1;
+}
+
+li:nth-child(1) {
+  color: #d64550;
+}
+
+/* 3. Color en RGB (rojo, verde, azul) */
+li:nth-child(2) {
+  color: rgb(42, 111, 151);
+}
+
+li:nth-child(3) {
+  color: rgb(230, 126, 34);
+  background-color: rgb(56, 48, 19);
+}

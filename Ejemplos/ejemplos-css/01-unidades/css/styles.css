@@ -1,0 +1,113 @@
+/* =========================================================
+   EJEMPLO 1 · UNIDADES
+   Conceptos: %, max-width, rem, em, vh
+
+   Experimenta:
+   1. Reduce y amplía la ventana: el contenedor se adapta sin
+      media queries y nunca supera 44rem (704px).
+   2. Cambia en tu navegador el tamaño de fuente por defecto
+      (Ajustes > Apariencia). Todo lo definido en rem crece.
+   3. Cambia font-size de .etiqueta--grande a 2rem: su relleno
+      crece con ella porque está en em.
+   4. En .lista-em, cambia 1.2em por 0.8em y observa cómo el
+      texto se hace cada vez más pequeño al anidar.
+   ========================================================= */
+
+/* 100% = el tamaño que el usuario tenga configurado (16px por
+   defecto). Así 1rem respeta sus preferencias. */
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #23303a;
+  background-color: #f4f7f5;
+}
+
+/* --- % + max-width + margin auto: contenedor adaptable --- */
+.contenedor {
+  width: 92%;          /* relativo al ancho del padre */
+  max-width: 44rem;    /* límite para pantallas grandes */
+  margin: 0 auto;      /* centrado horizontal */
+}
+
+/* --- vh: la portada ocupa, como mínimo, el 45% del alto de la pantalla --- */
+.portada {
+  min-height: 45vh;
+  padding: 3rem 0;
+  background-color: #2f5d50;
+  color: #ffffff;
+}
+
+/* --- rem para la escala tipográfica: valores predecibles --- */
+.portada h1 {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;   /* 40px con la configuración por defecto */
+  line-height: 1.2;
+}
+
+.portada p {
+  margin: 0;
+  font-size: 1.125rem; /* 18px */
+}
+
+.articulo {
+  padding: 2rem 0;
+}
+
+.articulo h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+/* --- em para espacios ligados al texto --- */
+.articulo p {
+  margin: 0 0 1em;     /* 1em = el tamaño de letra del propio párrafo */
+  line-height: 2;      /* deja sitio al relleno vertical de las etiquetas */
+}
+
+.etiqueta {
+  padding: 0.25em 0.75em; /* relativo a la letra de la etiqueta */
+  border: 1px solid #2f5d50;
+  background-color: #e3eee9;
+  font-size: 0.875rem;
+}
+
+/* Solo cambiamos font-size: el relleno se ajusta solo */
+.etiqueta--grande {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* --- Laboratorio --- */
+.laboratorio {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 2px dashed #2f5d50;
+  background-color: #ffffff;
+}
+
+.laboratorio h2 {
+  margin-top: 0;
+}
+
+.laboratorio h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+/* em: cada ul mide 1.2 veces lo que mide su padre.
+   16 → 19.2 → 23.04 → 27.65px */
+.lista-em,
+.lista-em ul {
+  font-size: 1.2em;
+}
+
+/* rem: todas miden 1.2 veces la raíz → 19.2px en todos los niveles */
+.lista-rem,
+.lista-rem ul {
+  font-size: 1.2rem;
+}
