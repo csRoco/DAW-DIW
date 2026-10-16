@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos de posicionamiento en CSS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="inicio">
+
+  <!-- Barra fija: ver ejemplo 4 -->
+  <header class="barra">
+    <p class="barra__titulo">Posicionamiento en CSS</p>
+    <nav class="barra__nav" aria-label="Ejemplos">
+      <a href="#relative">relative</a>
+
+    </nav>
+  </header>
+
+  <main class="contenedor">
+
+    <p class="intro">Cada sección es un ejemplo independiente. La barra superior y el botón «Arriba» de la esquina
+      también son ejemplos: los dos usan <code>position: fixed</code>. Abre <code>css/styles.css</code> y prueba las
+      propuestas marcadas como «Experimenta».</p>
+    <!-- EJEMPLO 2 · position: relative -->
+    <section id="relative" class="ejemplo">
+      <h2>2. position: relative</h2>
+      <p>La caja B se desplaza 20px hacia abajo y 40px a la derecha. El recuadro discontinuo marca el hueco que sigue
+        ocupando.</p>
+      <div class="pila">
+        <p class="caja">A</p>
+        <div class="hueco">
+          <p class="caja desplazada">B · relative</p>
+        </div>
+        <p class="caja">C</p>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Botón fijo: ver ejemplo 4 -->
+  <a class="arriba" href="#inicio">Arriba</a>
+</body>
+
+</html>

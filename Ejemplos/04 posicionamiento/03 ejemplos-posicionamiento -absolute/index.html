@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos de posicionamiento en CSS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="inicio">
+
+  <!-- Barra fija: ver ejemplo 4 -->
+  <header class="barra">
+    <p class="barra__titulo">Posicionamiento en CSS</p>
+    <nav class="barra__nav" aria-label="Ejemplos">
+      <a href="#absolute">absolute</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+
+    <p class="intro">Cada sección es un ejemplo independiente. La barra superior y el botón «Arriba» de la esquina también son ejemplos: los dos usan <code>position: fixed</code>. Abre <code>css/styles.css</code> y prueba las propuestas marcadas como «Experimenta».</p>
+    <!-- EJEMPLO 3 · Padre relative + hijo absolute -->
+    <section id="absolute" class="ejemplo">
+      <h2>3. Padre relative, hijo absolute</h2>
+      <p>La insignia se coloca en la esquina de cada tarjeta porque la tarjeta tiene <code>position: relative</code>.</p>
+
+      <article class="tarjeta">
+        <p class="insignia">Oferta</p>
+        <h3>Zapatillas de trail</h3>
+        <p>Suela de tacos para terreno suelto.</p>
+        <p class="tarjeta__precio">89 €</p>
+      </article>
+
+      <article class="tarjeta">
+        <p class="insignia insignia--nuevo">Nuevo</p>
+        <h3>Mochila de 20 litros</h3>
+        <p>Ligera, con bolsa de hidratación.</p>
+        <p class="tarjeta__precio">54 €</p>
+      </article>
+
+      <h3>Capa sobre una imagen con inset: 0</h3>
+      <figure class="foto">
+        <img src="img/montana.svg" alt="Ilustración de montañas al atardecer" width="600" height="300">
+        <figcaption class="foto__capa">Sierra de Guadarrama</figcaption>
+      </figure>
+    </section>
+
+  
+  </main>
+
+  <!-- Botón fijo: ver ejemplo 4 -->
+  <a class="arriba" href="#inicio">Arriba</a>
+</body>
+</html>

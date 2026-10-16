@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos de posicionamiento en CSS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="inicio">
+
+  <!-- Barra fija: ver ejemplo 4 -->
+  <header class="barra">
+    <p class="barra__titulo">Posicionamiento en CSS</p>
+    <nav class="barra__nav" aria-label="Ejemplos">
+      <a href="#overflow">overflow</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+
+    <p class="intro">Cada sección es un ejemplo independiente. La barra superior y el botón «Arriba» de la esquina también son ejemplos: los dos usan <code>position: fixed</code>. Abre <code>css/styles.css</code> y prueba las propuestas marcadas como «Experimenta».</p>
+
+    <!-- EJEMPLO 7 · overflow -->
+    <section id="overflow" class="ejemplo">
+      <h2>7. overflow</h2>
+      <p>Las cuatro cajas tienen <code>max-height: 6rem</code> y el mismo texto, que no cabe.</p>
+      <div class="desbordes">
+        <div class="desborde desborde--visible">
+          <p class="desborde__valor">visible</p>
+          <p>La mochila debe pesar menos del 10 % de tu peso. Lleva agua, algo de comida, chubasquero, gorra, crema solar, mapa y el móvil cargado. En otoño, añade un frontal por si anochece antes de lo previsto.</p>
+        </div>
+        <div class="desborde desborde--hidden">
+          <p class="desborde__valor">hidden</p>
+          <p>La mochila debe pesar menos del 10 % de tu peso. Lleva agua, algo de comida, chubasquero, gorra, crema solar, mapa y el móvil cargado. En otoño, añade un frontal por si anochece antes de lo previsto.</p>
+        </div>
+        <div class="desborde desborde--scroll">
+          <p class="desborde__valor">scroll</p>
+          <p>La mochila debe pesar menos del 10 % de tu peso. Lleva agua, algo de comida, chubasquero, gorra, crema solar, mapa y el móvil cargado. En otoño, añade un frontal por si anochece antes de lo previsto.</p>
+        </div>
+        <div class="desborde desborde--auto">
+          <p class="desborde__valor">auto</p>
+          <p>La mochila debe pesar menos del 10 % de tu peso. Lleva agua, algo de comida, chubasquero, gorra, crema solar, mapa y el móvil cargado. En otoño, añade un frontal por si anochece antes de lo previsto.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Botón fijo: ver ejemplo 4 -->
+  <a class="arriba" href="#inicio">Arriba</a>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos de posicionamiento en CSS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="inicio">
+
+  <!-- Barra fija: ver ejemplo 4 -->
+  <header class="barra">
+    <p class="barra__titulo">Posicionamiento en CSS</p>
+    <nav class="barra__nav" aria-label="Ejemplos">
+      <a href="#sticky">sticky</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+
+    <p class="intro">Cada sección es un ejemplo independiente. La barra superior y el botón «Arriba» de la esquina
+      también son ejemplos: los dos usan <code>position: fixed</code>. Abre <code>css/styles.css</code> y prueba las
+      propuestas marcadas como «Experimenta».</p>
+
+    <!-- EJEMPLO 5 · position: sticky (y overflow: auto) -->
+    <section id="sticky" class="ejemplo">
+      <h2>5. position: sticky</h2>
+      <p>Desplázate dentro del recuadro: el nombre de cada día se queda pegado arriba hasta que termina su bloque.</p>
+      <div class="agenda">
+        <div class="dia">
+          <h3>Lunes</h3>
+          <ul>
+            <li>8:30 · Diseño de interfaces</li>
+            <li>10:20 · Desarrollo en cliente</li>
+            <li>12:30 · Despliegue</li>
+            <li>14:20 · Tutoría</li>
+          </ul>
+        </div>
+        <div class="dia">
+          <h3>Martes</h3>
+          <ul>
+            <li>8:30 · Desarrollo en servidor</li>
+            <li>10:20 · Diseño de interfaces</li>
+            <li>12:30 · Empresa e iniciativa</li>
+            <li>14:20 · Inglés técnico</li>
+          </ul>
+        </div>
+        <div class="dia">
+          <h3>Miércoles</h3>
+          <ul>
+            <li>8:30 · Desarrollo en cliente</li>
+            <li>10:20 · Proyecto</li>
+            <li>12:30 · Desarrollo en servidor</li>
+            <li>14:20 · Despliegue</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Botón fijo: ver ejemplo 4 -->
+  <a class="arriba" href="#inicio">Arriba</a>
+</body>
+
+</html>

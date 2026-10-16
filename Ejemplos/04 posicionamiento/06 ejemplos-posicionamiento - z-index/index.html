@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos de posicionamiento en CSS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="inicio">
+
+  <!-- Barra fija: ver ejemplo 4 -->
+  <header class="barra">
+    <p class="barra__titulo">Posicionamiento en CSS</p>
+    <nav class="barra__nav" aria-label="Ejemplos">
+      <a href="#zindex">z-index</a>
+
+    </nav>
+  </header>
+
+  <main class="contenedor">
+
+    <p class="intro">Cada sección es un ejemplo independiente. La barra superior y el botón «Arriba» de la esquina
+      también son ejemplos: los dos usan <code>position: fixed</code>. Abre <code>css/styles.css</code> y prueba las
+      propuestas marcadas como «Experimenta».</p>
+
+    <!-- EJEMPLO 6 · z-index y contexto de apilamiento -->
+    <section id="zindex" class="ejemplo">
+      <h2>6. z-index</h2>
+
+      <h3>Tres capas superpuestas</h3>
+      <div class="capas">
+        <div class="capa capa--1">z-index: 1</div>
+        <div class="capa capa--2">z-index: 3</div>
+        <div class="capa capa--3">z-index: 2</div>
+      </div>
+
+      <h3>¿Por qué 999 no gana?</h3>
+      <div class="contexto">
+        <div class="padre">
+          .padre · z-index: 1
+          <div class="hijo">.hijo · z-index: 999</div>
+        </div>
+        <div class="vecino">.vecino · z-index: 2</div>
+      </div>
+
+      <h3>Ventana modal</h3>
+      <p>Una pantalla simulada: el fondo oscuro cubre todo con <code>inset: 0</code> y la ventana queda encima por su
+        <code>z-index</code>.</p>
+      <div class="pantalla">
+        <p>Contenido de la página que queda detrás de la ventana.</p>
+        <p>Más contenido de la página.</p>
+        <div class="modal__fondo"></div>
+        <div class="modal" role="dialog" aria-labelledby="modal-titulo">
+          <h4 id="modal-titulo">¿Guardar los cambios?</h4>
+          <p>Si sales sin guardar, perderás lo que has escrito.</p>
+          <button type="button">Guardar</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Botón fijo: ver ejemplo 4 -->
+  <a class="arriba" href="#inicio">Arriba</a>
+</body>
+
+</html>

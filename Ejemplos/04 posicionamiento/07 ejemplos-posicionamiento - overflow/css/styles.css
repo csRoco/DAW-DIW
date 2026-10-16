@@ -1,0 +1,163 @@
+/* =========================================================
+   EJEMPLOS DE POSICIONAMIENTO
+   Cada bloque lleva sus propuestas de «Experimenta».
+   ========================================================= */
+
+/* ---------- Base de la página ---------- */
+body {
+  margin: 0;
+  padding-top: 4.5rem; /* deja sitio a la barra fija (ejemplo 4) */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #1f2433;
+  background-color: #f3f4f1;
+}
+
+.contenedor {
+  width: 92%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+.intro {
+  margin: 2rem 0;
+}
+
+.ejemplo {
+  scroll-margin-top: 5.5rem; /* al saltar con el menú, que no quede bajo la barra fija */
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid #d5dae3;
+  background-color: #ffffff;
+}
+
+/* Caja genérica para los diagramas A / B / C */
+.caja {
+  margin: 0 0 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid #5b6475;
+  background-color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* =========================================================
+   4 · POSITION: FIXED (barra superior y botón «Arriba»)
+   Experimenta:
+   1. Quita padding-top de body (arriba del todo): la barra
+      tapa el principio de la página.
+   2. Cambia position: fixed por absolute en .barra y haz
+      scroll: ahora se va con la página.
+   3. Mueve el botón .arriba a la esquina inferior izquierda.
+   ========================================================= */
+.barra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; /* por encima de todo el contenido */
+  box-sizing: border-box;
+  width: 100%;
+  height: 4.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #1f2433;
+  color: #ffffff;
+}
+
+.barra__titulo {
+  margin: 0 0 0.25rem;
+  font-weight: bold;
+}
+
+/* En pantallas estrechas los enlaces no caben: en lugar de
+   saltar de línea (la barra tiene altura fija), se desplazan
+   en horizontal. Es overflow aplicado a un caso real (ej. 7). */
+.barra__nav {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.barra__nav a {
+  display: inline-block;
+  margin-right: 0.75rem;
+  color: #c9e7f5;
+  font-size: 0.9rem;
+}
+
+.arriba {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background-color: #b84d0f;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Foco visible para quien navega con teclado */
+.barra__nav a:focus,
+.arriba:focus,
+.menu a:focus {
+  outline: 3px solid #f6d55c;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   7 · OVERFLOW
+   Experimenta:
+   1. Cambia max-height por height en .desborde: ¿cambia algo?
+   2. Quita max-height: ya no hay desbordamiento posible.
+   3. Prueba overflow-x: hidden y overflow-y: auto por separado.
+   ========================================================= */
+.desborde {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 46%;
+  max-height: 6rem; /* sin un tamaño limitado no hay desborde */
+  margin: 0 2% 5rem 0;
+  padding: 0.5rem;
+  border: 2px solid #1f2433;
+  background-color: #dceef5;
+  font-size: 0.9rem;
+}
+
+.desborde p {
+  margin: 0;
+}
+
+.desborde__valor {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+.desborde--visible {
+  overflow: visible;
+} /* valor por defecto */
+.desborde--hidden {
+  overflow: hidden;
+}
+.desborde--scroll {
+  overflow: scroll;
+}
+.desborde--auto {
+  overflow: auto;
+}
